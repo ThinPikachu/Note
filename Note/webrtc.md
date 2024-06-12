@@ -12,7 +12,7 @@
 6.  当ClientA收集到Candidate信息后，PeerConnection会通过OnIceCandidate接口给ClientA发送通知，ClientA将收到的Candidate信息通过Signal服务器发送给ClientB，ClientB通过PeerConnection的AddIceCandidate方法保存起来。同样的操作ClientB对ClientA再来一次。
 7.  这样ClientA和ClientB就已经建立了音视频传输的P2P通道，ClientB接收到ClientA传送过来的音视频流，会通过PeerConnection的OnAddStream回调接口返回一个标识ClientA端音视频流的MediaStream对象，在ClientB端渲染出来即可。同样操作也适应ClientB到ClientA的音视频流的传输。
 
-总的来说
+总的来说就是：**offer、answer、ice、dtls**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDU5MTYxNjEsMzM0OTE1NDQ2XX0=
+eyJoaXN0b3J5IjpbLTkzNzgyNjY0MCwzMzQ5MTU0NDZdfQ==
 -->
