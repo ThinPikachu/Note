@@ -1,5 +1,3 @@
-> Written with [StackEdit](https://stackedit.io/).
-
 ### 1、webrtc建立连接的过程
 <img width="768" alt="image" src="https://github.com/ThinPikachu/Note/assets/55798328/098c9610-af33-42ec-8c9c-a5b078e67832">
 
@@ -14,6 +12,8 @@
 7.  这样ClientA和ClientB就已经建立了音视频传输的P2P通道，ClientB接收到ClientA传送过来的音视频流，会通过PeerConnection的OnAddStream回调接口返回一个标识ClientA端音视频流的MediaStream对象，在ClientB端渲染出来即可。同样操作也适应ClientB到ClientA的音视频流的传输。
 
 总的来说就是：**offer、answer、ice、dtls**
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMzUzODgxOCwzMzQ5MTU0NDZdfQ==
+eyJoaXN0b3J5IjpbMTM0NDIxODk0LDIwMjM1Mzg4MTgsMzM0OT
+E1NDQ2XX0=
 -->
