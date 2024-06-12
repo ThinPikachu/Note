@@ -2,6 +2,7 @@
 
 ### 1、webrtc建立连接的过程
 <img width="768" alt="image" src="https://github.com/ThinPikachu/Note/assets/55798328/098c9610-af33-42ec-8c9c-a5b078e67832">
+
 上述序列中，标注的场景是ClientA向ClientB发起对聊请求，调用描述如下：
 
 1.  ClientA首先创建PeerConnection对象，然后打开本地音视频设备，将音视频数据封装成MediaStream添加到PeerConnection中。
@@ -14,5 +15,5 @@
 
 总的来说就是：**offer、answer、ice、dtls**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNzgyNjY0MCwzMzQ5MTU0NDZdfQ==
+eyJoaXN0b3J5IjpbMjAyMzUzODgxOCwzMzQ5MTU0NDZdfQ==
 -->
