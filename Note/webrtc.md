@@ -13,7 +13,9 @@
 
 总的来说就是：**offer、answer、ice、dtls**
 
+> server端的ice信息可能在answer中就携带了
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0NDIxODk0LDIwMjM1Mzg4MTgsMzM0OT
-E1NDQ2XX0=
+eyJoaXN0b3J5IjpbLTE0ODk0MTE4ODcsMjAyMzUzODgxOCwzMz
+Q5MTU0NDZdfQ==
 -->
