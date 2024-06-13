@@ -17,16 +17,23 @@
 ### 常用的转码参数
 `ffmpeg -i .\cut.mp4 -vf "drawtext=fontfile=simhei.ttf: text=‘720_4M_250’:x=10:y=10:fontsize=24:fontcolor=red:shadowy=2" -vcodec h264 -acodec copy -bf 0 -g 250 -keyint_min 250 -sc_threshold 0 -r 25 -b:v 4M -maxrate 4M -s 1280:720 720p_4M_250.flv`
 **-bf 0** 代表不含B帧
+
 **-g 250** 代表关键帧之间间隔是250帧
+
 **-sc threshold 0** 代表关闭关键帧补偿
+
 **-r 25** 代表帧率
+
 **-b:v 4M** 代表码率是4兆
+
 **-s 1280:720** 代表分辨率
+
 **-vf "drawtext=fontfile=simhei.ttf: text=‘720_4M_250’:x=10:y=10:fontsize=24:fontcolor=red:shadowy=2"**  代表在屏幕左上角添加水印 720_4M_250 红色字体
 
 ### 查看是否含有B帧
 **mac**
 `ffprobe -v quiet -show_frames -select_streams v test.mp4 | grep "pict_type=B"`
+
 **windows**
 `ffprobe -v quiet -show_frames -select_streams v test.mp4 | findstr "pict_type=B"`
 
@@ -38,6 +45,7 @@
 ### 查看当前设备的音视频设备列表
 **mac**
 `ffmpeg -f avfoundation -list_devices true -i ""`
+
 **windows**
 `ffmpeg -list_devices true -f dshow -i dummy`
 
@@ -47,6 +55,7 @@
 
 ### 设置屏幕宽高比
 `ffmpeg -i input.mp4 -aspect 16:9 output.mp4`
+
 **常用的宽高比** 16:9，4:3，16:10，5:4，2:2，1:1，2:3，5:1，2:3，9:1
 ### ffmpeg录制屏幕
 **mac**
@@ -64,6 +73,6 @@
 `ffmpeg -f gdigrab -framerate 25 -i desktop -f dshow -i audio="Microphone (Realtek High Definition Audio)" output.mp4`
 -f dshow -i audio="Microphone (Realtek High Definition Audio)": 指定音频输入设备，可以吧Microphone (Realtek High Definition Audio)换为其他音频设备的名称
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExOTI2MjIyMiwxODgyNTA3OTQ2LDE4OD
-I1MDc5NDYsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTE4ODcyOTg1MjgsMTg4MjUwNzk0NiwxOD
+gyNTA3OTQ2LDczMDk5ODExNl19
 -->
