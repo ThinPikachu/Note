@@ -23,13 +23,19 @@
 ### 3、rtcp type
 参考：
 [https://blog.csdn.net/chenzheng_blog/article/details/111594990](https://blog.csdn.net/chenzheng_blog/article/details/111594990)
+
 [https://blog.csdn.net/The_Old_man_and_sea/article/details/114780559](https://blog.csdn.net/The_Old_man_and_sea/article/details/114780559)
+
 [https://blog.csdn.net/qq_22658119/article/details/121785298](https://blog.csdn.net/qq_22658119/article/details/121785298)
+
 [https://datatracker.ietf.org/doc/html/rfc3550#section-6.7](https://datatracker.ietf.org/doc/html/rfc3550#section-6.7)
+
 [https://blog.csdn.net/aggresss/article/details/108019463](https://blog.csdn.net/aggresss/article/details/108019463)（推荐）
 ### 4、NACK&RTX
 NACK、RTX是WebRTC里丢包重传策略，两个策略之间有一定的联系。 
+
 **NACK**：接收端通过RTCP将丢包的序列号通知给发送端，让发送端重传该包。 
+
 **RTX**：发送端在新的SSRC上发送重传包或者冗余包。
 
 在发送端收到NACK后，要重发接收端丢掉的包，发送的模式有两种：
@@ -40,7 +46,7 @@ NACK、RTX是WebRTC里丢包重传策略，两个策略之间有一定的联系�
 
 发送端发送的冗余Padding包 发送端的初始码率在达不到目标码率的情况下，会通过发送RTX包来补充，以能够逼近目标码率，当然这个机制必须启用RTX才能激活。因此，接收端可能会收到两种RTX包，一种是被NACK触发的，一种是发送端用来补充发送码率的冗余包。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMwMDkwMTczLDIwMTM3NTQyMDEsMTE3MD
-M3NDU2MSwtMTQ4OTQxMTg4NywyMDIzNTM4ODE4LDMzNDkxNTQ0
-Nl19
+eyJoaXN0b3J5IjpbNTU1NjAxNTMsMjAxMzc1NDIwMSwxMTcwMz
+c0NTYxLC0xNDg5NDExODg3LDIwMjM1Mzg4MTgsMzM0OTE1NDQ2
+XX0=
 -->
