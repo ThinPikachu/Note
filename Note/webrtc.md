@@ -26,7 +26,18 @@
 [https://datatracker.ietf.org/doc/html/rfc3550#section-6.7](https://datatracker.ietf.org/doc/html/rfc3550#section-6.7)
 [https://blog.csdn.net/aggresss/article/details/108019463](https://blog.csdn.net/aggresss/article/details/108019463)（推荐）
 ### 4、NACK&RTX
+NACK、RTX是WebRTC里丢包重传策略，两个策略之间有一定的联系。 
+**NACK**：接收端通过RTCP将丢包的序列号通知给发送端，让发送端重传该包。 
+**RTX**：发送端在新的SSRC上发送重传包或者冗余包。
+
+在发送端收到NACK后，要重发接收端丢掉的包，发送的模式有两种：
+-   RTX模式
+在接收端通过SDP使能发送端的RTX以后，重发的包封装到RTX包里发送，RTX包与原RTP有不同的SSRC，这样有助于避免SRTP的重放攻击，也能让接收端更好的估算带宽；
+-   普通模式
+在没有使能RTX时，发送端只是简单的重发原来的RTP包，这种模式会影响接收端的RTCP统计，比如会出现负的丢包率。
+
+发送端发送的冗余Padding包 发送端的初始码率在达不到目标码率的情况下，会通过发送RTX包来补充，以能够逼近目标码率，当然这个机制必须启用RTX才能激活。因此，接收端可能会收到两种RTX包，一种是被NACK触发的，一种是发送端用来补充发送码率的冗余包。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzI1NzM5NTEsMTE3MDM3NDU2MSwtMT
-Q4OTQxMTg4NywyMDIzNTM4ODE4LDMzNDkxNTQ0Nl19
+eyJoaXN0b3J5IjpbMjAxMzc1NDIwMSwxMTcwMzc0NTYxLC0xND
+g5NDExODg3LDIwMjM1Mzg4MTgsMzM0OTE1NDQ2XX0=
 -->
