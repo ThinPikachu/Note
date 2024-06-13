@@ -32,9 +32,11 @@
 
 ### 查看是否含有B帧
 **mac**
+
 `ffprobe -v quiet -show_frames -select_streams v test.mp4 | grep "pict_type=B"`
 
 **windows**
+
 `ffprobe -v quiet -show_frames -select_streams v test.mp4 | findstr "pict_type=B"`
 
 ### 查看音频反向
@@ -44,9 +46,11 @@
 
 ### 查看当前设备的音视频设备列表
 **mac**
+
 `ffmpeg -f avfoundation -list_devices true -i ""`
 
 **windows**
+
 `ffmpeg -list_devices true -f dshow -i dummy`
 
 ### 通过ffprobe分析流
@@ -82,6 +86,6 @@
 
 -f dshow -i audio="Microphone (Realtek High Definition Audio)": 指定音频输入设备，可以吧Microphone (Realtek High Definition Audio)换为其他音频设备的名称
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5MzU4MTI0MiwxODgyNTA3OTQ2LDE4OD
-I1MDc5NDYsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTEzNzg3NzY1MTAsMTg4MjUwNzk0NiwxOD
+gyNTA3OTQ2LDczMDk5ODExNl19
 -->
