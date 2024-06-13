@@ -7,8 +7,11 @@
 **去除音频**：`-c:v copy -an`
 
 **去除视频**：`-c:a copy -vn`
+
 例如：
+
 **转h264** : `ffmpeg -i .\cut.mp4 -c:v copy -an cut.h264`
+
 **转aac**：`ffmpeg -i .\cut.mp4 -vn -c:a copy test.aac`
 
 ### 常用的转码参数
@@ -61,6 +64,6 @@
 `ffmpeg -f gdigrab -framerate 25 -i desktop -f dshow -i audio="Microphone (Realtek High Definition Audio)" output.mp4`
 -f dshow -i audio="Microphone (Realtek High Definition Audio)": 指定音频输入设备，可以吧Microphone (Realtek High Definition Audio)换为其他音频设备的名称
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MjUwNzk0NiwxODgyNTA3OTQ2LDczMD
-k5ODExNl19
+eyJoaXN0b3J5IjpbMjExOTI2MjIyMiwxODgyNTA3OTQ2LDE4OD
+I1MDc5NDYsNzMwOTk4MTE2XX0=
 -->
