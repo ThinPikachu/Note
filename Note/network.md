@@ -51,6 +51,10 @@
 在这个例子中，假设VIP是192.168.1.100，当用户发送请求到 `www.examplestore.com` 时，其实是发送到了192.168.1.100。这个请求首先被负载均衡器接收，然后根据负载均衡器的策略，请求可能被转发到后端的Server A（192.168.1.101）、Server B（192.168.1.102）或Server C（192.168.1.103）。
 
 如果Server A突然宕机，负载均衡器会检测到这一点，并停止向Server A发送新的请求，同时将流量重定向到Server B和Server C，直到Server A恢复正常。这样，即使个别服务器出现问题，用户体验也不会受到太大影响，网站的高可用性得以保证。
+
+### 3、正向代理
+
+### 4、反向代理
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzAwOTMyMjNdfQ==
+eyJoaXN0b3J5IjpbMTI2OTgyOTk1Nl19
 -->
