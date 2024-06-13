@@ -5,6 +5,7 @@
 
 ### 推流时去除视频或者音频
 **去除音频**：`-c:v copy -an`
+
 **去除视频**：`-c:a copy -vn`
 例如：
 **转h264** : `ffmpeg -i .\cut.mp4 -c:v copy -an cut.h264`
@@ -60,5 +61,6 @@
 `ffmpeg -f gdigrab -framerate 25 -i desktop -f dshow -i audio="Microphone (Realtek High Definition Audio)" output.mp4`
 -f dshow -i audio="Microphone (Realtek High Definition Audio)": 指定音频输入设备，可以吧Microphone (Realtek High Definition Audio)换为其他音频设备的名称
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MjUwNzk0Niw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTIwMTAwMTg2MjgsMTg4MjUwNzk0Niw3Mz
+A5OTgxMTZdfQ==
 -->
