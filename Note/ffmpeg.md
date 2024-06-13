@@ -51,6 +51,7 @@
 
 ### 通过ffprobe分析流
 `ffprobe -show_packets -i "rtmp:/xxxxxxx" -of xml`
+
 `ffprobe -show_frames -i "rtmp:/xxxxxxx" -of xml`
 
 ### 设置屏幕宽高比
@@ -60,7 +61,9 @@
 ### ffmpeg录制屏幕
 **mac**
 `ffmpeg -f avfoundation -framerate 25 -i "1" output.mp4`
+
 `ffmpeg -f avfoundation -framerate 30 -pixel_format uyvy422 -i "2" output.mp4`
+
 **windows**
 `ffmpeg -f gdigrab -framerate 25 -i desktop output.mp4`
 
@@ -73,6 +76,6 @@
 `ffmpeg -f gdigrab -framerate 25 -i desktop -f dshow -i audio="Microphone (Realtek High Definition Audio)" output.mp4`
 -f dshow -i audio="Microphone (Realtek High Definition Audio)": 指定音频输入设备，可以吧Microphone (Realtek High Definition Audio)换为其他音频设备的名称
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODcyOTg1MjgsMTg4MjUwNzk0NiwxOD
+eyJoaXN0b3J5IjpbLTE4MjcyNTQ0MTQsMTg4MjUwNzk0NiwxOD
 gyNTA3OTQ2LDczMDk5ODExNl19
 -->
