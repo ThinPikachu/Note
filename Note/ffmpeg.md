@@ -5,6 +5,7 @@
 
 ### 推流时去除视频或者音频
 **去除音频**：`-c:v copy -an`
+
 **去除视频**：`-c:a copy -vn`
 例如：
 **转h264** : `ffmpeg -i .\cut.mp4 -c:v copy -an cut.h264`
