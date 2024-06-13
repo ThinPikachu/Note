@@ -16,7 +16,9 @@
 > server端的ice信息可能在answer中就携带了
 ### 2、webrtc常见的payload type
 音频用到的RTP payload类型有：`111 103 104 9 0 8 106 105 13 110 112 113 126`。
+
 视频用到的RTP payload类型有：`96 97 98 99 100 101 102 121 127 120 125 107 108 109 124 119 123 118 114 115 116`。
+
 参考：[https://blog.jianchihu.net/webrtc-research-m89-key-update.html](https://blog.jianchihu.net/webrtc-research-m89-key-update.html)
 ### 3、rtcp type
 参考：
@@ -38,6 +40,7 @@ NACK、RTX是WebRTC里丢包重传策略，两个策略之间有一定的联系�
 
 发送端发送的冗余Padding包 发送端的初始码率在达不到目标码率的情况下，会通过发送RTX包来补充，以能够逼近目标码率，当然这个机制必须启用RTX才能激活。因此，接收端可能会收到两种RTX包，一种是被NACK触发的，一种是发送端用来补充发送码率的冗余包。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxMzc1NDIwMSwxMTcwMzc0NTYxLC0xND
-g5NDExODg3LDIwMjM1Mzg4MTgsMzM0OTE1NDQ2XX0=
+eyJoaXN0b3J5IjpbNTMwMDkwMTczLDIwMTM3NTQyMDEsMTE3MD
+M3NDU2MSwtMTQ4OTQxMTg4NywyMDIzNTM4ODE4LDMzNDkxNTQ0
+Nl19
 -->
