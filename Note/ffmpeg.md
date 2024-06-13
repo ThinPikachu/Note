@@ -60,22 +60,28 @@
 **常用的宽高比** 16:9，4:3，16:10，5:4，2:2，1:1，2:3，5:1，2:3，9:1
 ### ffmpeg录制屏幕
 **mac**
+
 `ffmpeg -f avfoundation -framerate 25 -i "1" output.mp4`
 
 `ffmpeg -f avfoundation -framerate 30 -pixel_format uyvy422 -i "2" output.mp4`
 
 **windows**
+
 `ffmpeg -f gdigrab -framerate 25 -i desktop output.mp4`
 
 ### ffmpeg录制屏幕和声音
 **mac**
+
 `ffmpeg -f avfoundation -framerate 25 -i "1:0" -f avfoundation -i ":0" output.mp4`
+
 -f avfoundation -i ":0": 指定音频输入为默认设备，可以改为其他音频设备的index
 
 **windows**
+
 `ffmpeg -f gdigrab -framerate 25 -i desktop -f dshow -i audio="Microphone (Realtek High Definition Audio)" output.mp4`
+
 -f dshow -i audio="Microphone (Realtek High Definition Audio)": 指定音频输入设备，可以吧Microphone (Realtek High Definition Audio)换为其他音频设备的名称
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjcyNTQ0MTQsMTg4MjUwNzk0NiwxOD
-gyNTA3OTQ2LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMTI5MzU4MTI0MiwxODgyNTA3OTQ2LDE4OD
+I1MDc5NDYsNzMwOTk4MTE2XX0=
 -->
