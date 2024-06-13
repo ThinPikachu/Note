@@ -21,8 +21,12 @@
 ### 3、rtcp type
 参考：
 [https://blog.csdn.net/chenzheng_blog/article/details/111594990](https://blog.csdn.net/chenzheng_blog/article/details/111594990)
-
+[https://blog.csdn.net/The_Old_man_and_sea/article/details/114780559](https://blog.csdn.net/The_Old_man_and_sea/article/details/114780559)
+[https://blog.csdn.net/qq_22658119/article/details/121785298](https://blog.csdn.net/qq_22658119/article/details/121785298)
+[https://datatracker.ietf.org/doc/html/rfc3550#section-6.7](https://datatracker.ietf.org/doc/html/rfc3550#section-6.7)
+[https://blog.csdn.net/aggresss/article/details/108019463](https://blog.csdn.net/aggresss/article/details/108019463)（推荐）
+### 4、NACK&RTX
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNjYzMDc3OSwxMTcwMzc0NTYxLC0xND
-g5NDExODg3LDIwMjM1Mzg4MTgsMzM0OTE1NDQ2XX0=
+eyJoaXN0b3J5IjpbLTE4NzI1NzM5NTEsMTE3MDM3NDU2MSwtMT
+Q4OTQxMTg4NywyMDIzNTM4ODE4LDMzNDkxNTQ0Nl19
 -->
