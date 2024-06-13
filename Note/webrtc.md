@@ -14,8 +14,12 @@
 总的来说就是：**offer、answer、ice、dtls**
 
 > server端的ice信息可能在answer中就携带了
+### 2、webrtc常见的payload type
+音频用到的RTP payload类型有：`111 103 104 9 0 8 106 105 13 110 112 113 126`。
+视频用到的RTP payload类型有：`96 97 98 99 100 101 102 121 127 120 125 107 108 109 124 119 123 118 114 115 116`。
+参考：[https://blog.jianchihu.net/webrtc-research-m89-key-update.html](https://blog.jianchihu.net/webrtc-research-m89-key-update.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODk0MTE4ODcsMjAyMzUzODgxOCwzMz
-Q5MTU0NDZdfQ==
+eyJoaXN0b3J5IjpbMTE3MDM3NDU2MSwtMTQ4OTQxMTg4NywyMD
+IzNTM4ODE4LDMzNDkxNTQ0Nl19
 -->
