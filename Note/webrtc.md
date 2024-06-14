@@ -51,9 +51,11 @@ NACK、RTX是WebRTC里丢包重传策略，两个策略之间有一定的联系�
 builders_会在RTCPSender的构造函数中进行初始化：
 ![输入图片说明](/imgs/2024-06-14/FN2wdgjadePgyju7.png)
 ### 6、webrtc接收rtcp包流程
-在PeerConnection::Initialize中，会在network_thread线程上异步调用Call::DeliverPacket
+在PeerConnection::Initialize中，会在network_thread线程上异步调用Call::DeliverPacket函数
+![输入图片说明](/imgs/2024-06-14/aN1by8oMf6rcrHxX.png)
+Call::DeliverPacket中会区分rtp和rtcp来分别处理。如果是RTCP则调用Call::DeliverRtcp
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwOTUwNjk1NCwtNzkxOTk3OTk3LDE5Nz
+eyJoaXN0b3J5IjpbMTAwMjczNjQ2MiwtNzkxOTk3OTk3LDE5Nz
 czODIyMjksNTU1NjAxNTMsMjAxMzc1NDIwMSwxMTcwMzc0NTYx
 LC0xNDg5NDExODg3LDIwMjM1Mzg4MTgsMzM0OTE1NDQ2XX0=
 -->
