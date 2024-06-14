@@ -48,6 +48,9 @@ NACK、RTX是WebRTC里丢包重传策略，两个策略之间有一定的联系�
 ### webrtc发送rtcp包流程
 ```mermaid
 sequenceDiagram
+alt s case
+ModuleRtpRtcpImpl ->> RTCPSender: TimeToSendRTCPReport
+end
 爱丽丝 ->> 鲍勃: 你好鲍勃，你好吗？
 鲍勃-->>约翰: 约翰，你呢？
 鲍勃--x 爱丽丝: 我很好，谢谢！
@@ -59,7 +62,7 @@ Note right of 约翰: 鲍勃想了很长<br/>很长的时间，太长了<br/>文
 ```
 ModuleRtpRtcpImpl::Process
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyOTU2ODc3NSwxOTc3MzgyMjI5LDU1NT
+eyJoaXN0b3J5IjpbLTYwNDE5NzM4MywxOTc3MzgyMjI5LDU1NT
 YwMTUzLDIwMTM3NTQyMDEsMTE3MDM3NDU2MSwtMTQ4OTQxMTg4
 NywyMDIzNTM4ODE4LDMzNDkxNTQ0Nl19
 -->
