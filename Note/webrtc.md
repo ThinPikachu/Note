@@ -45,13 +45,14 @@ NACK、RTX是WebRTC里丢包重传策略，两个策略之间有一定的联系�
 在没有使能RTX时，发送端只是简单的重发原来的RTP包，这种模式会影响接收端的RTCP统计，比如会出现负的丢包率。
 
 发送端发送的冗余Padding包 发送端的初始码率在达不到目标码率的情况下，会通过发送RTX包来补充，以能够逼近目标码率，当然这个机制必须启用RTX才能激活。因此，接收端可能会收到两种RTX包，一种是被NACK触发的，一种是发送端用来补充发送码率的冗余包。
-### webrtc发送rtcp包流程
+### 5、webrtc发送rtcp包流程
 首先会调用ModuleRtpRtcpImpl::Process，其中会判断是否是时间去发送rtcp也就是TimeToSendRTCPReport，如果是则调用RTCPSender::SendRTCP，RTCPSender::SendCompoundRTCP，而RTCPSender::SendCompoundRTCP中会通过回调的方式去构造RTCP包，具体逻辑如下图：
 ![输入图片说明](/imgs/2024-06-14/AdF8tSCnlS8MIBK1.png)
 builders_会在RTCPSender的构造函数中进行初始化：
 ![输入图片说明](/imgs/2024-06-14/FN2wdgjadePgyju7.png)
+### 6、webrtc接收rtcp包流程
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NjA4OTUzMSwxOTc3MzgyMjI5LDU1NT
+eyJoaXN0b3J5IjpbLTc5MTk5Nzk5NywxOTc3MzgyMjI5LDU1NT
 YwMTUzLDIwMTM3NTQyMDEsMTE3MDM3NDU2MSwtMTQ4OTQxMTg4
 NywyMDIzNTM4ODE4LDMzNDkxNTQ0Nl19
 -->
