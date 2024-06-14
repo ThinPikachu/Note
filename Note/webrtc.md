@@ -54,9 +54,9 @@ builders_会在RTCPSender的构造函数中进行初始化：
 在PeerConnection::Initialize中，会在network_thread线程上异步调用Call::DeliverPacket函数
 ![输入图片说明](/imgs/2024-06-14/aN1by8oMf6rcrHxX.png)
 Call::DeliverPacket中会区分rtp和rtcp来分别处理。如果是RTCP则调用Call::DeliverRtcp。
-接着分别调用VideoReceiveStream、AudioReceiveStream、VideoSendStream和AudioSendStream
+接着分别调用VideoReceiveStream、AudioReceiveStream、VideoSendStream和AudioSendStream的DeliverRtcp函数。但最终都会走到RTCPReceiver::IncomingPacket中按RTCP的
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3NTE4NzQwNSwtNzkxOTk3OTk3LDE5Nz
+eyJoaXN0b3J5IjpbLTUwNTM4NDczMCwtNzkxOTk3OTk3LDE5Nz
 czODIyMjksNTU1NjAxNTMsMjAxMzc1NDIwMSwxMTcwMzc0NTYx
 LC0xNDg5NDExODg3LDIwMjM1Mzg4MTgsMzM0OTE1NDQ2XX0=
 -->
