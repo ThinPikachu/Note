@@ -56,10 +56,11 @@ builders_会在RTCPSender的构造函数中进行初始化：
 Call::DeliverPacket中会区分rtp和rtcp来分别处理。如果是RTCP则调用Call::DeliverRtcp。
 接着分别调用VideoReceiveStream、AudioReceiveStream、VideoSendStream和AudioSendStream的DeliverRtcp函数。但最终都会走到RTCPReceiver::IncomingPacket中按RTCP的type来处理。包括把fb传给gcc来处理也在这里实现。
 ### 7、mediasoup接收处理rtcp包流程
-WebRtcTransport::OnPacketReceived - WebRtcTransport::OnRtcpDataReceived - Packet::Parse - 然后根据各个类型的rtcp包进行parse - Transport::ReceiveRtcpPacket - 
+WebRtcTransport::OnPacketReceived - WebRtcTransport::OnRtcpDataReceived - Packet::Parse - 然后根据各个类型的rtcp包进行parse - Transport::ReceiveRtcpPacket - Transport::HandleRtcpPacket - 然后根据rtcp包的类型调用对应的操作函数
+### 8、
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzg4Mjc1MzEsLTY4OTA3NDYzNSwtNz
-kxOTk3OTk3LDE5NzczODIyMjksNTU1NjAxNTMsMjAxMzc1NDIw
-MSwxMTcwMzc0NTYxLC0xNDg5NDExODg3LDIwMjM1Mzg4MTgsMz
-M0OTE1NDQ2XX0=
+eyJoaXN0b3J5IjpbNDQwMTA5MzY3LC02ODkwNzQ2MzUsLTc5MT
+k5Nzk5NywxOTc3MzgyMjI5LDU1NTYwMTUzLDIwMTM3NTQyMDEs
+MTE3MDM3NDU2MSwtMTQ4OTQxMTg4NywyMDIzNTM4ODE4LDMzND
+kxNTQ0Nl19
 -->
