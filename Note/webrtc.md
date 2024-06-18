@@ -61,9 +61,11 @@ WebRtcTransport::OnPacketReceived - WebRtcTransport::OnRtcpDataReceived - Packet
 WebRtcTransport::OnPacketReceived - WebRtcTransport::OnRtpDataReceived - Transport::ReceiveRtpPacket - TransportCongestionControlServer::IncomingPacket - 
 
 Transport::OnTimer - Transport::SendRtcp
+
+请求关键帧、N
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NjUzNDU4MCw3MzE2MTczMzgsLTY4OT
-A3NDYzNSwtNzkxOTk3OTk3LDE5NzczODIyMjksNTU1NjAxNTMs
-MjAxMzc1NDIwMSwxMTcwMzc0NTYxLC0xNDg5NDExODg3LDIwMj
-M1Mzg4MTgsMzM0OTE1NDQ2XX0=
+eyJoaXN0b3J5IjpbLTEyNDY2MTkxNzAsNzMxNjE3MzM4LC02OD
+kwNzQ2MzUsLTc5MTk5Nzk5NywxOTc3MzgyMjI5LDU1NTYwMTUz
+LDIwMTM3NTQyMDEsMTE3MDM3NDU2MSwtMTQ4OTQxMTg4NywyMD
+IzNTM4ODE4LDMzNDkxNTQ0Nl19
 -->
