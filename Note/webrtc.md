@@ -59,9 +59,11 @@ Call::DeliverPacket中会区分rtp和rtcp来分别处理。如果是RTCP则调�
 WebRtcTransport::OnPacketReceived - WebRtcTransport::OnRtcpDataReceived - Packet::Parse - 然后根据各个类型的rtcp包进行parse - Transport::ReceiveRtcpPacket - Transport::HandleRtcpPacket - 然后根据rtcp包的类型调用对应的操作函数
 ### 8、mediasoup发送处理rtcp包流程
 WebRtcTransport::OnPacketReceived - WebRtcTransport::OnRtpDataReceived - Transport::ReceiveRtpPacket - TransportCongestionControlServer::IncomingPacket - 
+
+Transport::OnTimer - Transport::SendRtcp
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMxNjE3MzM4LC02ODkwNzQ2MzUsLTc5MT
-k5Nzk5NywxOTc3MzgyMjI5LDU1NTYwMTUzLDIwMTM3NTQyMDEs
-MTE3MDM3NDU2MSwtMTQ4OTQxMTg4NywyMDIzNTM4ODE4LDMzND
-kxNTQ0Nl19
+eyJoaXN0b3J5IjpbLTc0NjUzNDU4MCw3MzE2MTczMzgsLTY4OT
+A3NDYzNSwtNzkxOTk3OTk3LDE5NzczODIyMjksNTU1NjAxNTMs
+MjAxMzc1NDIwMSwxMTcwMzc0NTYxLC0xNDg5NDExODg3LDIwMj
+M1Mzg4MTgsMzM0OTE1NDQ2XX0=
 -->
