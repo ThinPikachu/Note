@@ -62,9 +62,10 @@ WebRtcTransport::OnPacketReceived - WebRtcTransport::OnRtpDataReceived - Transpo
 
 Transport::OnTimer - Transport::SendRtcp
 
-请求关键帧、N
+请求关键帧、NACK等发送RTCP包：OnRtpStreamSendRtcpPacket
+ 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDY2MTkxNzAsNzMxNjE3MzM4LC02OD
+eyJoaXN0b3J5IjpbLTEzNTA0NDM0NDYsNzMxNjE3MzM4LC02OD
 kwNzQ2MzUsLTc5MTk5Nzk5NywxOTc3MzgyMjI5LDU1NTYwMTUz
 LDIwMTM3NTQyMDEsMTE3MDM3NDU2MSwtMTQ4OTQxMTg4NywyMD
 IzNTM4ODE4LDMzNDkxNTQ0Nl19
