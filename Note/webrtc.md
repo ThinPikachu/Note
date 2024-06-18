@@ -55,8 +55,10 @@ builders_会在RTCPSender的构造函数中进行初始化：
 ![输入图片说明](/imgs/2024-06-14/aN1by8oMf6rcrHxX.png)
 Call::DeliverPacket中会区分rtp和rtcp来分别处理。如果是RTCP则调用Call::DeliverRtcp。
 接着分别调用VideoReceiveStream、AudioReceiveStream、VideoSendStream和AudioSendStream的DeliverRtcp函数。但最终都会走到RTCPReceiver::IncomingPacket中按RTCP的type来处理。包括把fb传给gcc来处理也在这里实现。
+### 7、medias
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4OTA3NDYzNSwtNzkxOTk3OTk3LDE5Nz
-czODIyMjksNTU1NjAxNTMsMjAxMzc1NDIwMSwxMTcwMzc0NTYx
-LC0xNDg5NDExODg3LDIwMjM1Mzg4MTgsMzM0OTE1NDQ2XX0=
+eyJoaXN0b3J5IjpbMTI2MzU1NzQ4NSwtNjg5MDc0NjM1LC03OT
+E5OTc5OTcsMTk3NzM4MjIyOSw1NTU2MDE1MywyMDEzNzU0MjAx
+LDExNzAzNzQ1NjEsLTE0ODk0MTE4ODcsMjAyMzUzODgxOCwzMz
+Q5MTU0NDZdfQ==
 -->
